@@ -55,7 +55,7 @@ export function SorryLetter() {
               From me, to you
             </p>
             <h1 className="mt-3 font-script text-5xl leading-tight text-primary sm:text-6xl">
-              I&apos;m Sorry, My Love
+              I&apos;m sorry po lablab
             </h1>
             <div className="mx-auto mt-5 flex items-center justify-center gap-3 text-accent">
               <span className="h-px w-12 bg-border" />
