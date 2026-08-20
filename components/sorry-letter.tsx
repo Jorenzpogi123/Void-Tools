@@ -6,11 +6,11 @@ import { Heart, Lock, LockKeyhole } from "lucide-react"
 const PASSWORD = "1410"
 
 const paragraphs = [
-  "Lablab, gusto ko lang pong mag-sorry sa mga nagawa kong pagkakamali. Hindi ko na sinunod ang boundaries ko sayo na wag lumapit sa ibang babae.",
-  "Sorry rin po, lablab, na hindi ko po nasabi sayo na ex ko si Zyrrle. Nag-isip po ako na pag sinabi ko ay magtatampo ka — yun ang akala ko. Pero yun pala, mas magtatampo ka pa pag hindi ko sinabi sayo. Sorry po talaga, lablab ko.",
-  "Hindi naman po perpekto ang lahat ng tao, diba? Lahat po tayo ay hindi perpekto, kaya sorry po, lablab ko.",
-  "Lagi mo pong tatandaan na mahal na mahal kita, at hinding-hindi kita iiwan kahit ilang taon pa yan.",
-  "Labyou po, lablab ko. Mwahh²",
+  "I've been sitting here trying to find the right words, and none of them feel big enough. So I'll just start with the truest one: I'm sorry.",
+  "I'm sorry for the moment I let slip, for the words I can't take back, and for the hurt I put in your eyes when all I ever want is to be the reason they light up.",
+  "You are the softest, best part of my every day. And knowing I'm the one who made that day harder for you is something I can't shake off. You deserve my patience, my gentleness, and my whole heart — not my worst moments.",
+  "I'm not asking you to pretend it didn't happen. I'm asking you to let me do better, to show you with time instead of just telling you. I'm still learning how to love you the way you deserve, and I promise I'm learning.",
+  "Thank you for being someone worth apologizing to, worth changing for, worth choosing again every single day.",
 ]
 
 export function SorryLetter() {
@@ -124,7 +124,7 @@ export function SorryLetter() {
         <article className="w-full max-w-xl animate-fade-rise rounded-2xl border border-border bg-card px-7 py-10 shadow-[0_30px_80px_-30px_rgba(120,20,40,0.5)] sm:px-12 sm:py-14">
           <header className="mb-8 text-center">
             <p className="font-serif text-sm uppercase tracking-[0.35em] text-muted-foreground">
-              From Jorenz, to Crizha
+              From me, to you
             </p>
             <h1 className="mt-3 font-script text-5xl leading-tight text-primary sm:text-6xl">
               I&apos;m sorry po lablab
