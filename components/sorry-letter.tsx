@@ -6,11 +6,11 @@ import { Heart, Lock, LockKeyhole } from "lucide-react"
 const PASSWORD = "1410"
 
 const paragraphs = [
-  "I've been sitting here trying to find the right words, and none of them feel big enough. So I'll just start with the truest one: I'm sorry.",
-  "I'm sorry for the moment I let slip, for the words I can't take back, and for the hurt I put in your eyes when all I ever want is to be the reason they light up.",
-  "You are the softest, best part of my every day. And knowing I'm the one who made that day harder for you is something I can't shake off. You deserve my patience, my gentleness, and my whole heart — not my worst moments.",
-  "I'm not asking you to pretend it didn't happen. I'm asking you to let me do better, to show you with time instead of just telling you. I'm still learning how to love you the way you deserve, and I promise I'm learning.",
-  "Thank you for being someone worth apologizing to, worth changing for, worth choosing again every single day.",
+  "I've been sitting here trying to find the right words, and none of them feel big enough. So I'll just start with the truest one: I'm sorry, and I'm sorry for lying to you.",
+  "I lied to you about who Zy really was. I called it something smaller than it was, I hid the truth, and I let you believe a version of things that wasn't real. You trusted me, and I broke that trust with my own words. That's on me, no excuses.",
+  "The truth is Zy is my ex, and I should have told you that plainly and honestly from the start. I was scared of how it would look, so I chose the easy lie instead of the honest answer — and that was wrong. You never deserved to be kept in the dark by the person who's supposed to be safest for you.",
+  "I'm not asking you to pretend it didn't happen. I'm asking you to let me earn your trust back slowly, with honesty this time — no more hiding, no more half-truths, nothing about Zy or anyone else. You'll always get the real answer from me, even when it's hard.",
+  "Thank you for being someone worth being honest with, worth changing for, worth choosing again every single day. I'm so sorry, lablab.",
 ]
 
 export function SorryLetter() {
