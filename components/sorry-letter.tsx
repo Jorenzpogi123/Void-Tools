@@ -1,0 +1,90 @@
+"use client"
+
+import { useState } from "react"
+import { Heart } from "lucide-react"
+
+const paragraphs = [
+  "I've been sitting here trying to find the right words, and none of them feel big enough. So I'll just start with the truest one: I'm sorry.",
+  "I'm sorry for the moment I let slip, for the words I can't take back, and for the hurt I put in your eyes when all I ever want is to be the reason they light up.",
+  "You are the softest, best part of my every day. And knowing I'm the one who made that day harder for you is something I can't shake off. You deserve my patience, my gentleness, and my whole heart — not my worst moments.",
+  "I'm not asking you to pretend it didn't happen. I'm asking you to let me do better, to show you with time instead of just telling you. I'm still learning how to love you the way you deserve, and I promise I'm learning.",
+  "Thank you for being someone worth apologizing to, worth changing for, worth choosing again every single day.",
+]
+
+export function SorryLetter() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="relative z-10 flex min-h-svh w-full flex-col items-center justify-center px-5 py-16">
+      {!open ? (
+        <button
+          onClick={() => setOpen(true)}
+          className="group flex flex-col items-center gap-8 focus:outline-none"
+          aria-label="Open the letter"
+        >
+          <div className="relative h-52 w-80 max-w-[86vw] rounded-md bg-card shadow-[0_20px_60px_-20px_rgba(120,20,40,0.45)] transition-transform duration-500 group-hover:-translate-y-2">
+            {/* envelope body */}
+            <div className="absolute inset-0 overflow-hidden rounded-md border border-border">
+              <div className="absolute bottom-0 left-0 h-1/2 w-full bg-secondary/60" />
+              <div
+                className="absolute inset-x-0 bottom-0 top-1/2 border-t border-border/60"
+                style={{
+                  clipPath: "polygon(0 100%, 50% 30%, 100% 100%)",
+                  background: "var(--secondary)",
+                }}
+              />
+            </div>
+            {/* flap */}
+            <div
+              className="absolute inset-x-0 top-0 h-1/2 origin-top border border-border bg-muted transition-transform duration-500 group-hover:[transform:rotateX(18deg)]"
+              style={{ clipPath: "polygon(0 0, 100% 0, 50% 100%)" }}
+            />
+            {/* wax seal */}
+            <div className="absolute left-1/2 top-1/2 z-20 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg [animation:soft-pulse_2.4s_ease-in-out_infinite]">
+              <Heart className="h-6 w-6 fill-current" />
+            </div>
+          </div>
+          <span className="font-serif text-lg tracking-wide text-primary/80">
+            A letter for you — tap to open
+          </span>
+        </button>
+      ) : (
+        <article className="w-full max-w-xl animate-fade-rise rounded-2xl border border-border bg-card px-7 py-10 shadow-[0_30px_80px_-30px_rgba(120,20,40,0.5)] sm:px-12 sm:py-14">
+          <header className="mb-8 text-center">
+            <p className="font-serif text-sm uppercase tracking-[0.35em] text-muted-foreground">
+              From me, to you
+            </p>
+            <h1 className="mt-3 font-script text-5xl leading-tight text-primary sm:text-6xl">
+              I&apos;m Sorry, My Love
+            </h1>
+            <div className="mx-auto mt-5 flex items-center justify-center gap-3 text-accent">
+              <span className="h-px w-12 bg-border" />
+              <Heart className="h-4 w-4 fill-current" />
+              <span className="h-px w-12 bg-border" />
+            </div>
+          </header>
+
+          <div className="space-y-5">
+            {paragraphs.map((text, i) => (
+              <p
+                key={i}
+                className="animate-fade-rise font-serif text-xl leading-relaxed text-foreground/90"
+                style={{ animationDelay: `${0.25 + i * 0.28}s` }}
+              >
+                {text}
+              </p>
+            ))}
+          </div>
+
+          <footer
+            className="animate-fade-rise mt-10 text-right"
+            style={{ animationDelay: `${0.25 + paragraphs.length * 0.28}s` }}
+          >
+            <p className="font-serif text-lg text-muted-foreground">Always yours,</p>
+            <p className="font-script text-4xl text-primary">Me</p>
+          </footer>
+        </article>
+      )}
+    </div>
+  )
+}
