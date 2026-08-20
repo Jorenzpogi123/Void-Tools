@@ -151,7 +151,7 @@ export function SorryLetter() {
             className="animate-fade-rise mt-10 text-right"
             style={{ animationDelay: `${0.25 + paragraphs.length * 0.28}s` }}
           >
-            <p className="font-serif text-lg text-muted-foreground">Always yours,</p>
+            <p className="font-serif text-lg text-muted-foreground">I love you po Lablab,</p>
             <p className="font-script text-4xl text-primary">Me</p>
           </footer>
         </article>
