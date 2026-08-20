@@ -152,7 +152,7 @@ export function SorryLetter() {
             style={{ animationDelay: `${0.25 + paragraphs.length * 0.28}s` }}
           >
             <p className="font-serif text-lg text-muted-foreground">I love you po Lablab,</p>
-            <p className="font-script text-4xl text-primary">Me</p>
+            <p className="font-script text-4xl text-primary">Jorenz</p>
           </footer>
         </article>
       )}
