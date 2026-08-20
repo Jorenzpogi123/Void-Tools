@@ -124,7 +124,7 @@ export function SorryLetter() {
         <article className="w-full max-w-xl animate-fade-rise rounded-2xl border border-border bg-card px-7 py-10 shadow-[0_30px_80px_-30px_rgba(120,20,40,0.5)] sm:px-12 sm:py-14">
           <header className="mb-8 text-center">
             <p className="font-serif text-sm uppercase tracking-[0.35em] text-muted-foreground">
-              From me, to you
+              From Jorenz, to Crizha
             </p>
             <h1 className="mt-3 font-script text-5xl leading-tight text-primary sm:text-6xl">
               I&apos;m sorry po lablab
