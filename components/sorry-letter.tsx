@@ -1,7 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Heart } from "lucide-react"
+import { Heart, Lock, LockKeyhole } from "lucide-react"
+
+const PASSWORD = "1410"
 
 const paragraphs = [
   "I've been sitting here trying to find the right words, and none of them feel big enough. So I'll just start with the truest one: I'm sorry.",
@@ -12,7 +14,77 @@ const paragraphs = [
 ]
 
 export function SorryLetter() {
+  const [unlocked, setUnlocked] = useState(false)
   const [open, setOpen] = useState(false)
+  const [value, setValue] = useState("")
+  const [error, setError] = useState(false)
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (value.trim() === PASSWORD) {
+      setError(false)
+      setUnlocked(true)
+    } else {
+      setError(true)
+    }
+  }
+
+  if (!unlocked) {
+    return (
+      <div className="relative z-10 flex min-h-svh w-full flex-col items-center justify-center px-5 py-16">
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full max-w-sm animate-fade-rise flex-col items-center gap-8 rounded-2xl border border-border bg-card px-7 py-12 shadow-[0_30px_80px_-30px_rgba(120,20,40,0.5)]"
+        >
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg [animation:soft-pulse_2.4s_ease-in-out_infinite]">
+            <LockKeyhole className="h-7 w-7" />
+          </div>
+
+          <div className="text-center">
+            <h1 className="font-script text-4xl text-primary">A letter is waiting</h1>
+            <p className="mt-2 font-serif text-base text-muted-foreground text-balance">
+              Enter our little secret to unlock it
+            </p>
+          </div>
+
+          <div className="w-full">
+            <label htmlFor="password" className="sr-only">
+              Password
+            </label>
+            <div className="relative">
+              <Lock className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <input
+                id="password"
+                type="password"
+                inputMode="numeric"
+                autoComplete="off"
+                value={value}
+                onChange={(e) => {
+                  setValue(e.target.value)
+                  if (error) setError(false)
+                }}
+                placeholder="••••"
+                aria-invalid={error}
+                className="w-full rounded-full border border-border bg-secondary/40 py-3 pl-11 pr-4 text-center font-serif text-xl tracking-[0.5em] text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+              />
+            </div>
+            {error && (
+              <p className="mt-3 text-center font-serif text-sm text-primary">
+                That&apos;s not quite it, my love. Try again.
+              </p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            className="w-full rounded-full bg-primary py-3 font-serif text-lg text-primary-foreground shadow-lg transition hover:brightness-105 focus:outline-none focus:ring-2 focus:ring-primary/40"
+          >
+            Unlock
+          </button>
+        </form>
+      </div>
+    )
+  }
 
   return (
     <div className="relative z-10 flex min-h-svh w-full flex-col items-center justify-center px-5 py-16">
